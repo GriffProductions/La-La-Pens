@@ -47,7 +47,7 @@ section {
 }
 
 /* Style the featured pen listings */
-.catalog {
+.catalog .featured-pens{
     margin: 20px;
     padding:  10px;
     text-align: center;
