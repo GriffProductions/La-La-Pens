@@ -2,17 +2,18 @@
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 /* Set a background color and font for the entire page */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    background-color: rgb(253, 96, 214);
 }
 
 /* Style the header */
 header {
-    background-color: rgb(255, 0, 191);
+    background-color: rgb(211, 113, 186);
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -38,7 +39,7 @@ nav a {
 
 /* Style the main content sections */
 section {
-    margin: 20px;
+    margin: 40px;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
@@ -46,9 +47,9 @@ section {
 }
 
 /* Style the featured pen listings */
-.pen-listing {
+.catalog {
     margin: 20px;
-    padding: 10px;
+    padding:  10px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -56,8 +57,8 @@ section {
 }
 
 .pen-listing img {
-    max-width: 100%;
-    border: 1px solid #ddd;
+    max-width: 43%;
+    border: 5px solid purple;
     border-radius: 5px;
 }
 
