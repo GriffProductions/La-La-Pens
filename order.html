@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Pen Tickets!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Order Your Pen Tickets!</h1><br/>
+
+    <form action="https://script.google.com/macros/s/AKfycbw5ER6IaPHwZ6Tn30TKEZUMPcQk29jWyKuGnr94McRT1gHoL_U8n4GO4FtKC43ieZOo/exec" method="POST" class="center-flex">
+        <label for="username">Tik-Tok Username (you'll need this!)</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="quantity">Number of Tickets (40 max)</label>
+        <div class="quantity-container">
+            <input type="number" id="quantity" name="quantity" class="quantity-input" value="1" min="1" max="40" required onchange="updateTotal()">
+            <span id="totalPrice">$5.00</span>
+        </div><br>
+
+        <label for="email">E-mail Address</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="address">Shipping Address</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <label for="phone">Phone Number (Optional)</label>
+        <input type="text" id="phone" name="phone"><br>
+
+        <button class="button" type="submit">Submit Order</button>
+        <div>
+            <a href="/" class="button">Home</a>
+        </div>
+    </form>
+
+    <script>
+        // Global variable for ticket price
+        const ticketPrice = 5.00;
+
+        function updateTotal() {
+            // Get quantity value
+            const quantity = parseInt(document.getElementById('quantity').value);
+            // Calculate total price
+            const totalCost = quantity * ticketPrice;
+            // Update total price display
+            document.getElementById('totalPrice').textContent = `$${totalCost.toFixed(2)}`;
+        }
+
+        // Update total price on quantity change
+        document.getElementById('quantity').addEventListener('input', updateTotal);
+
+        // Initialize total price on page load
+        updateTotal();
+    </script>
+</body>
+</html>
