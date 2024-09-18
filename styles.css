@@ -13,32 +13,40 @@ body {
     height: 100vh;
 }
 
+/* Container styling */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    display: flex; /* Use flexbox to layout the buttons */
+    flex-direction: column; /* Arrange buttons in a column */
+    align-items: center; /* Center align buttons horizontally */
+    gap: 15px; /* Space between buttons */
 }
 
+/* Button styling */
 .button {
-    display: block;
-    width: 80%;
-    max-width: 400px;
-    padding: 15px;
-    margin: 10px 0;
-    text-align: center;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block; /* Makes the button inline but allows padding */
+    padding: 15px 30px; /* Add padding for button size */
+    background-color: transparent; /* Classy, modern button color */
+    color: #007BFF; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2em; /* Font size */
+    font-family: 'Montserrat', sans-serif; /* Consistent font family */
+    font-weight: 700; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #007BFF; /* Outline color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transitions */
 }
 
+/* Hover effect */
 .button:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05);
+    background-color: transparent; /* Make background transparent on hover */
+    color: #007BFF; /* Change text color on hover */
+    border: 2px solid #007BFF; /* Keep border color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
 }
+
+
 .order-container {
     max-width: 600px;
     margin: 0 auto;
@@ -50,6 +58,20 @@ body {
 
 h1 {
     text-align: center;
+    color: #ffffff; /* White text color */
+    font-size: 4em; /* Larger font size */
+    font-family: 'Montserrat', sans-serif; /* Stylish font family */
+    font-weight: 700; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Spacing between letters */
+    margin: 20px 0; /* Margin for spacing above and below */
+    padding: 20px; /* Padding around the text */
+    background: linear-gradient(45deg, #f06, #4a90e2); /* Gradient background */
+    -webkit-background-clip: text; /* Clipping the background to text */
+    background-clip: text; /* Clipping the background to text */
+    color: transparent; /* Text color made transparent to show gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect for a 3D look */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Shadow effect for text */
 }
 
 form {
